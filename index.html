@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeLift AI - Financial Recovery & Career Growth</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">↗</div>
+      <div>
+        <h1>LifeLift AI</h1>
+        <p>Lift Your Skills. Lift Your Income. Lift Your Life.</p>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#financial">Finance</a>
+      <a href="#career">Career</a>
+      <a href="#about">About</a>
+    </nav>
+    <button id="themeToggle" class="btn">🌙</button>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="card hero">
+      <h2>Complete Life Support Platform</h2>
+      <p>Debt recovery + Career intelligence in one dashboard.</p>
+      <button id="goDashboard" class="btn primary">Get Started</button>
+    </section>
+
+    <section id="login" class="card form-card">
+      <h2>Quick Mock Login</h2>
+      <input id="userName" placeholder="Name" />
+      <input id="userEmail" placeholder="Email" type="email" />
+      <select id="userRole">
+        <option value="student">Student</option>
+        <option value="professional">Working Professional</option>
+      </select>
+      <button id="loginBtn" class="btn primary">Login</button>
+    </section>
+
+    <section id="dashboard" class="dashboard hidden">
+      <div class="row">
+        <article class="card score-card">
+          <h3>Life Stability</h3>
+          <p id="lifeStability" class="score">-</p>
+          <p id="statusText">Login to calculate your plan.</p>
+        </article>
+
+        <article class="card score-card">
+          <h3>Financial Score</h3>
+          <p id="financialScore" class="score">-</p>
+          <p>Debt indicators, EMI stress and timeline</p>
+        </article>
+
+        <article class="card score-card">
+          <h3>Career Fit</h3>
+          <p id="careerScore" class="score">-</p>
+          <p>Strength, skill gap, internship readiness</p>
+        </article>
+      </div>
+
+      <h2 id="financial">Module 1: Financial Recovery</h2>
+      <div class="row">
+        <input id="totalLoans" type="number" placeholder="Total Loan Amount (₹)" min="0" />
+        <input id="totalEmi" type="number" placeholder="Monthly total EMI (₹)" min="0" />
+        <input id="monthlyIncome" type="number" placeholder="Monthly income (₹)" min="0" />
+        <input id="monthlyExpenses" type="number" placeholder="Monthly expenses (₹)" min="0" />
+        <input id="savings" type="number" placeholder="Savings (₹)" min="0" />
+        <button id="calcFinBtn" class="btn">Analyze Finance</button>
+      </div>
+
+      <div id="finResults" class="results hidden">
+        <h3>Financial Recommendations</h3>
+        <ul id="finPlan"></ul>
+      </div>
+
+      <h2 id="career">Module 2: Student Career Intelligence</h2>
+      <div class="row">
+        <input id="marks" type="number" placeholder="Academic Score (0-100)" min="0" max="100" />
+        <input id="skillLevel" type="number" placeholder="Skill level (1-10)" min="1" max="10" />
+        <input id="commLevel" type="number" placeholder="Communication level (1-10)" min="1" max="10" />
+        <input id="internExp" type="number" placeholder="Internship months" min="0" />
+        <button id="calcCareerBtn" class="btn">Analyze Career</button>
+      </div>
+
+      <div id="careerResults" class="results hidden">
+        <h3>Career Guidance</h3>
+        <ul id="careerPlan"></ul>
+      </div>
+
+      <h3>Future Simulation (Income + Debt)</h3>
+      <div id="simResult" class="results hidden">
+        <p id="scenario1"></p>
+        <p id="scenario2"></p>
+      </div>
+
+      <div class="row gutters">
+        <button id="resetBtn" class="btn outline">Reset</button>
+      </div>
+    </section>
+
+    <section id="about" class="card about">
+      <h3>Explainers</h3>
+      <p>Loan awareness, interest type, credit score and planning examples are available in the next MVP.</p>
+      <p>Current prototype implements scoring and simulation logic to prove the concept.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
